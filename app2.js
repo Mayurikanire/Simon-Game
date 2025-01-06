@@ -34,17 +34,12 @@ function levelUp(){
     let randIdx =Math.floor(Math.random()*4);
     let randColor = btns[randIdx];
     let randbtn = document.querySelector(`.${randColor}`);
-    // console.log(randIdx);
-    // console.log(randColor);
-    // console.log(randbtn);
     gameSeq.push(randColor);
     console.log(gameSeq);
     gameFlash(randbtn);
 }
 function checkAns(idx){
-    //console.log("curr level : ", level);
-    //let idx = level - 1;
-
+   
     if (userSeq[idx] == gameSeq[idx]){
         if(userSeq.length == gameSeq.length){
             setTimeout(levelUp, 1000);
